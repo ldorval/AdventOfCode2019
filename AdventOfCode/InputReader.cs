@@ -8,8 +8,7 @@ namespace AdventOfCode
     {
         public static string ReadAll(string file)
         {
-            using var reader = new StreamReader(PathFrom(file));
-            return reader.ReadToEnd();
+            return File.ReadAllText(PathFrom(file));
         }
 
         public static List<string> ReadLines(string file)
