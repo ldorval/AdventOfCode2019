@@ -10,14 +10,28 @@ namespace AdventOfCodeTest
         public void ReadAllReturnsEntireFileContent()
         {
             var content = InputReader.ReadAll("DayTest/DayTestPart1.txt");
-            Assert.That(content, Is.EqualTo("bacon\r\npatate"));
+            Assert.That(content, Is.EqualTo("144\r\n218"));
         }
 
         [Test]
         public void ReadLinesReturnListOfLines()
         {
             var lines = InputReader.ReadLines("DayTest/DayTestPart1.txt");
-            Assert.That(lines, Is.EquivalentTo(new List<string> { "bacon", "patate" }));
+            Assert.That(lines, Is.EquivalentTo(new List<string> { "144", "218" }));
+        }
+
+        [Test]
+        public void ReadLinesAsInt()
+        {
+            var lines = InputReader.ReadLinesInt("DayTest/DayTestPart1.txt");
+            Assert.That(lines, Is.EquivalentTo(new List<int> { 144, 218 }));
+        }
+        
+        [Test]
+        public void ReadLinesAsLong()
+        {
+            var lines = InputReader.ReadLinesLong("DayTest/DayTestPart1.txt");
+            Assert.That(lines, Is.EquivalentTo(new List<long> { 144, 218 }));
         }
     }
 }

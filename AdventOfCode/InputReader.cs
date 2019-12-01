@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -19,6 +20,18 @@ namespace AdventOfCode
         private static string PathFrom(string file)
         {
             return $"../../../../AdventOfCode/{file}";
+        }
+
+        public static List<int> ReadLinesInt(string file)
+        {
+            var lines = ReadLines(file);
+            return lines.Select(x => Convert.ToInt32(x)).ToList();
+        }
+
+        public static List<long> ReadLinesLong(string file)
+        {
+            var lines = ReadLines(file);
+            return lines.Select(x => Convert.ToInt64(x)).ToList();
         }
     }
 }
