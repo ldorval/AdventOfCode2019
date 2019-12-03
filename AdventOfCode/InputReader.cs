@@ -33,5 +33,11 @@ namespace AdventOfCode
             var lines = ReadLines(file);
             return lines.Select(x => Convert.ToInt64(x)).ToList();
         }
+
+        public static List<int> ReadIntCsv(string file)
+        {
+            var input = File.ReadAllText(PathFrom(file));
+            return input.Split(",").Select(x => Convert.ToInt32(x)).ToList();
+        }
     }
 }

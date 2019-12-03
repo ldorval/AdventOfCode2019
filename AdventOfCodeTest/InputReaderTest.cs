@@ -33,5 +33,12 @@ namespace AdventOfCodeTest
             var lines = InputReader.ReadLinesLong("DayTest/DayTestPart1.txt");
             Assert.That(lines, Is.EquivalentTo(new List<long> { 144, 218 }));
         }
+
+        [Test]
+        public void ReadIntCsv()
+        {
+            var ints = InputReader.ReadIntCsv("DayTest/IntCsv.txt");
+            Assert.That(ints, Is.EquivalentTo(new List<int> { 12, 14, 2, 5 }));
+        }
     }
 }
