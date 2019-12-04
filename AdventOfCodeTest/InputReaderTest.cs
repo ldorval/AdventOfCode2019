@@ -40,5 +40,12 @@ namespace AdventOfCodeTest
             var ints = InputReader.ReadIntCsv("DayTest/IntCsv.txt");
             Assert.That(ints, Is.EquivalentTo(new List<int> { 12, 14, 2, 5 }));
         }
+
+        [Test]
+        public void ReadStringCsv()
+        {
+            var ints = InputReader.ReadCsv("DayTest/IntCsv.txt");
+            Assert.That(ints, Is.EquivalentTo(new List<string> { "12", "14", "2", "5" }));
+        }
     }
 }
